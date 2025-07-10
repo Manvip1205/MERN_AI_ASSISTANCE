@@ -59,7 +59,8 @@ export const Login = async (req,res) =>{
         secure: false
     })
     return res.status(200).json('welcome sirji' )
-    } catch (error) {
+    } 
+    catch (error) {
         return res.status(500).json({message: "sorry"})
     }
 }
@@ -67,7 +68,7 @@ export const Login = async (req,res) =>{
 export const logOut = async (req,res)=>{
     try {
         res.clearCookie("token")
-        return res.status(200).json("by by sirji")
+        return res.status(200).json('by by ${user.name}... i miss you')
     } catch (error) {
         return res.status(500).json("something wrong")
     }
