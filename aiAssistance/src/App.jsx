@@ -1,10 +1,16 @@
-import LoginPage from "./pages/loginPage";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
+import signUp from "./pages/signUp"
+import login from "./pages/login"
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <LoginPage/>
-    </div>
+    
+      <Routes>
+        <Route path ="login" element = {<login/>}/>
+        <Route path = "signUp" element = {<signUp/>}/>
+      </Routes>
+    
   );
 }
 
