@@ -1,8 +1,9 @@
 import React from "react";
 
-function login() {
+function Login() {
     return (
-        <div>login</div>
-    )
+        <div className="text-xl font-bold text-blue-600">Login Page</div>
+    );
 }
-export default login
+
+export default Login;
