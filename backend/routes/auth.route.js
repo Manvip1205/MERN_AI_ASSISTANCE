@@ -1,10 +1,10 @@
-import express from "express"
-import { Login, logOut, signUp } from "../controllers/auth.controller.js"
+import express from "express";
+import { Login, logOut, signUp } from "../controllers/auth.controller.js";
 
-const authRouter = express.Router()
+const authRouter = express.Router();
 
-authRouter.post("/signup",signUp)
-authRouter.post("/login",Login)
-authRouter.get("Logout",logOut)
+authRouter.post("/signup", signUp);
+authRouter.post("/login", Login);
+authRouter.get("/logout", logOut); // ✅ Fixed route path
 
-export default authRouter
+export default authRouter;
