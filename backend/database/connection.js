@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 
-const  dbConnection = async () => {
-  mongoose.connect(process.env.MONGO_URI, {
-      dbName: "AI ASSISTANT ",
+const dbConnection = async () => {
+    mongoose.connect(process.env.MONGO_URI, {
+        dbName: "AI_ASSISTANT"
     })
     .then(() => {
-      console.log("Connected to database!");
+        console.log("Connected to database!");
     })
     .catch((err) => {
-      console.log("Some error occured while connecting to database:", err);
+        console.error("Database connection error:", err);
     });
 };
 
